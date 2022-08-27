@@ -1,0 +1,78 @@
+.contacts {
+    position: relative;
+    padding-top: 5rem;
+    color: #fafafa;
+    font-family: "Poppins", sans-serif;
+    overflow: hidden;
+    footer {
+        padding: 1rem;
+        margin-top: 2rem;
+        .container {
+            .wrapper {
+                h6 {
+                    color: gray;
+                    text-align: center;
+                }
+            }
+        }
+    }
+    .peace-sign {
+        bottom: -30%;
+        right: 0;
+        position: absolute;
+        max-width: 350px;
+        z-index: -1;
+    }
+
+    .container {
+        .wrapper {
+            .title {
+                padding-bottom: 1rem;
+                h1 {
+                    font-weight: 300;
+                }
+            }
+            .contact-text-headline {
+                h1 {
+                    font-family: "Montserrat", sans-serif;
+                    font-weight: 900;
+                    font-size: 35px;
+                    mix-blend-mode: difference;
+                    .cookies {
+                        color: #ff6900;
+                    }
+                    .connect {
+                        color: #f0ff3e;
+                    }
+                }
+            }
+            .socials {
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+                margin-top: 5rem;
+                font-family: "Montserrat", sans-serif;
+                h4 {
+                    position: relative;
+                }
+                h4::after {
+                    position: absolute;
+                    content: "";
+                    height: 1px;
+                    width: 40%;
+                    background-color: #c4c4c4;
+                    bottom: -5px;
+                    left: 0;
+                    transition: width 0.3s ease;
+                }
+                h4:hover::after {
+                    width: 100%;
+                }
+                @media (min-width: 768px) {
+                    flex-direction: row;
+                    gap: 1rem;
+                }
+            }
+        }
+    }
+}

@@ -1,26 +1,804 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+.nav-bar {
+  position: fixed;
+  top: 2rem;
+  width: 100%;
+  z-index: 999;
+  user-select: none;
+}
+.nav-bar .container .wrapper {
+  border-radius: 25px;
+  padding: 1.5rem;
+  background-color: rgba(27, 30, 39, 0.8);
+  border: 1px solid rgba(40, 44, 57, 0.8);
+  display: flex;
+  backdrop-filter: blur(10px);
+  justify-content: space-between;
+  align-items: center;
+  max-width: 90%;
+  margin: 0 auto;
+}
+.nav-bar .container .wrapper .logo-wrap {
+  display: flex;
+  align-items: center;
+}
+.nav-bar .container .wrapper .logo-wrap svg {
+  width: 120px;
+}
+.nav-bar .container .wrapper .mb-nav-btns-wrap {
+  display: flex;
+  gap: 80px;
+}
+@media (min-width: 768px) {
+  .nav-bar .container .wrapper .mb-nav-btns-wrap {
+    display: none;
+  }
+}
+.nav-bar .container .wrapper .mb-nav-btns-wrap .nav-btn {
+  background: transparent;
+  border: none;
+  color: #fafafa;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+}
+.nav-bar .container .wrapper .dk-nav-btns-wrap {
+  display: none;
+  gap: 80px;
+}
+@media (min-width: 768px) {
+  .nav-bar .container .wrapper .dk-nav-btns-wrap {
+    display: flex;
+  }
+}
+.nav-bar .container .wrapper .dk-nav-btns-wrap .nav-btn {
+  background: transparent;
+  border: none;
+  color: #fafafa;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+}
+.nav-bar .container .wrapper .dk-nav-btns-wrap .nav-btn a {
+  text-decoration: none;
+  color: #fafafa;
 }
 
-a {
-  color: inherit;
+.hero {
+  height: clamp(600px, 100vh, 800px);
+  color: #fafafa;
+}
+.hero .container .wrapper {
+  padding-top: 7rem;
+  display: flex;
+  flex-direction: column-reverse;
+}
+.hero .container .wrapper .hero-info .punch-text {
+  font-family: "Montserrat", sans-serif;
+}
+.hero .container .wrapper .hero-info .punch-text h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  font-weight: 900;
+}
+.hero .container .wrapper .hero-info .punch-text span {
+  display: inline-block;
+}
+.hero .container .wrapper .hero-info .punch-text .gradient-text-1 {
+  background: linear-gradient(90deg, rgb(238, 174, 202) 0%, rgb(148, 187, 233) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+.hero .container .wrapper .hero-info .punch-text .gradient-text-2 {
+  background: linear-gradient(133.64deg, #00e0ff 25.59%, #ebff00 56.88%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+.hero .container .wrapper .hero-info .punch-text .gradient-text-3 {
+  background: linear-gradient(89.94deg, #1400ff -4.8%, #2369f1 -4.8%, #ff00c7 51.25%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+.hero .container .wrapper .hero-info .information {
+  margin-top: 1rem;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+}
+.hero .container .wrapper .hero-info .information span {
+  font-weight: 300;
+  font-size: 15px;
+  display: block;
+}
+.hero .container .wrapper .hero-info .buttons {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-evenly;
+}
+.hero .container .wrapper .hero-info .buttons button {
+  display: flex;
+  align-items: center;
+  width: 40%;
+  max-width: 300px;
+  padding: 0.3rem 0.7rem;
+  font-family: "Poppins", sans-serif;
+  border: none;
+  font-size: 12px;
+  font-weight: 500;
+}
+.hero .container .wrapper .hero-info .buttons button svg {
+  margin-right: 0.5rem;
+  width: 17px;
+}
+.hero .container .wrapper .hero-info .buttons button.github-btn {
+  color: #10101a;
+  background-color: #fafafa;
+}
+.hero .container .wrapper .hero-info .buttons button.linkedin-btn {
+  background-color: #10101a;
+  color: #fafafa;
+  border: 1px solid #fafafa;
+}
+.hero .container .wrapper .hero-info .scroll-down {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.hero .container .wrapper .hero-info .scroll-down span {
+  font-family: "Poppins", sans-serif;
+  margin-top: 0.4rem;
+  font-size: 10px;
+}
+.hero .container .wrapper .hero-img {
+  max-width: 200px;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .hero .container .wrapper .hero-info .punch-text h1 {
+    font-size: 4rem;
+  }
+  .hero .container .wrapper .hero-info .information span {
+    font-size: 18px;
+  }
+  .hero .container .wrapper .hero-info .buttons {
+    margin-top: 2rem;
+    gap: 1rem;
+    justify-content: center;
+  }
+  .hero .container .wrapper .hero-info .buttons button {
+    max-width: 200px;
+  }
+  .hero .container .wrapper .hero-img {
+    max-width: 230px;
+  }
+}
+@media (min-width: 1024px) {
+  .hero .container .wrapper {
+    padding-top: 11rem;
+    flex-direction: row;
+  }
+  .hero .container .wrapper .hero-info {
+    flex: 1;
+  }
+  .hero .container .wrapper .hero-info .punch-text h1 {
+    font-size: 5rem;
+    text-align: left;
+  }
+  .hero .container .wrapper .hero-info .information {
+    text-align: left;
+  }
+  .hero .container .wrapper .hero-info .information span {
+    font-size: 20px;
+  }
+  .hero .container .wrapper .hero-info .buttons {
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+  .hero .container .wrapper .hero-info .buttons button {
+    max-width: 160px;
+    height: 40px;
+  }
+  .hero .container .wrapper .hero-info .scroll-down {
+    display: none;
+  }
+  .hero .container .wrapper .hero-img {
+    max-width: 400px;
+  }
+}
+
+.about-me {
+  margin-top: 5rem;
+  padding-bottom: 2rem;
+  color: #fafafa;
+  font-family: "Poppins", sans-serif;
+}
+.about-me .container .wrapper .title h1 {
+  font-weight: 300;
+  font-size: 25px;
+}
+.about-me .container .wrapper .main {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.about-me .container .wrapper .main .my-image {
+  max-width: 400px;
+  margin: 0 auto;
+}
+.about-me .container .wrapper .main .my-about-me {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 2rem;
+}
+.about-me .container .wrapper .main .my-about-me .text {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.about-me .container .wrapper .main .my-about-me .text span {
+  font-size: 15px;
+  font-weight: 300;
+}
+.about-me .container .wrapper .main .my-about-me .view-prof {
+  background-color: #10101a;
+  border: 3px solid #fafafa;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  padding: 0.2rem;
+  width: 100%;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .about-me .container .wrapper .main {
+    flex-direction: row;
+  }
+  .about-me .container .wrapper .main .my-image {
+    flex: 1;
+  }
+  .about-me .container .wrapper .main .my-about-me {
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .about-me .container .wrapper .main .my-about-me .text span {
+    font-size: 1rem;
+  }
+}
+
+.projects-section {
+  margin-top: 2rem;
+  color: #fafafa;
+  font-family: "Poppins", sans-serif;
+  padding-bottom: 10rem;
+}
+.projects-section .container .wrapper .title {
+  padding-bottom: 1rem;
+}
+.projects-section .container .wrapper .title h1 {
+  font-weight: 300;
+}
+.projects-section .container .wrapper .projects {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+.projects-section .container .wrapper .projects .project {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(180deg, rgba(35, 37, 49, 0.5), rgba(15, 15, 24, 0.5));
+  border: 1px solid rgba(20, 27, 44, 0.9);
+  backdrop-filter: blur(10px);
+  padding: 1rem;
+  border-radius: 5px;
+}
+.projects-section .container .wrapper .projects .project .project-image {
+  display: flex;
+  align-items: center;
+  max-width: 200px;
+  margin: 0 auto;
+}
+.projects-section .container .wrapper .projects .project .project-info {
+  top: 1rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+}
+.projects-section .container .wrapper .projects .project .project-info .project-title h3 {
+  font-size: 20px;
+}
+.projects-section .container .wrapper .projects .project .project-info .project-information {
+  margin-top: 0.5rem;
+}
+.projects-section .container .wrapper .projects .project .project-info .project-information span {
+  font-size: 15px;
+  display: block;
+}
+.projects-section .container .wrapper .projects .project .project-info .project-technologies {
+  margin-top: 1rem;
+  padding-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.projects-section .container .wrapper .projects .project .project-info .project-technologies .tech {
+  background-color: #34495e;
+  border-radius: 25px;
+  width: fit-content;
+  padding: 0.3rem 1rem;
+  font-size: 12px;
+}
+.projects-section .container .wrapper .projects .project .project-info .project-buttons {
+  display: flex;
+  gap: 1rem;
+}
+.projects-section .container .wrapper .projects .project .project-info .project-buttons button {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  background: transparent;
+  padding: 0.6rem 0.5rem;
+  border: 1px solid #fafafa;
+  border-radius: 5px;
+  font-size: 11px;
+}
+.projects-section .container .wrapper .projects .project .project-info .project-buttons button svg {
+  width: 20px;
+  margin-right: 5px;
+}
+.projects-section .container .wrapper .projects .project .project-info .project-buttons .cta {
+  border: none;
+  background-color: #2c3e50;
+}
+@media (min-width: 768px) {
+  .projects-section .container .wrapper .projects .project {
+    flex-direction: row;
+    gap: 2rem;
+  }
+  .projects-section .container .wrapper .projects .project .project-image {
+    flex: 1;
+    max-width: 300px;
+  }
+  .projects-section .container .wrapper .projects .project .project-info {
+    flex: 2;
+    text-align: left;
+  }
+  .projects-section .container .wrapper .projects .project .project-info .project-technologies {
+    justify-content: flex-start;
+  }
+}
+@media (min-width: 1024px) {
+  .projects-section .container .wrapper .projects .project {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 900px;
+  }
+  .projects-section .container .wrapper .projects .project .project-image {
+    flex: unset;
+    flex-basis: 50%;
+  }
+  .projects-section .container .wrapper .projects .project .project-info {
+    flex: unset;
+    flex-basis: 50%;
+  }
+  .projects-section .container .wrapper .projects .project .project-info .project-title h3 {
+    font-size: 30px;
+  }
+  .projects-section .container .wrapper .projects .project .project-info .project-buttons {
+    flex-direction: column;
+  }
+  .projects-section .container .wrapper .projects .project .project-info .project-buttons button {
+    font-size: 13px;
+    max-width: 170px;
+  }
+}
+
+.contacts {
+  position: relative;
+  padding-top: 5rem;
+  color: #fafafa;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+}
+.contacts footer {
+  padding: 1rem;
+  margin-top: 2rem;
+}
+.contacts footer .container .wrapper h6 {
+  color: gray;
+  text-align: center;
+}
+.contacts .peace-sign {
+  bottom: -30%;
+  right: 0;
+  position: absolute;
+  max-width: 350px;
+  z-index: -1;
+}
+.contacts .container .wrapper .title {
+  padding-bottom: 1rem;
+}
+.contacts .container .wrapper .title h1 {
+  font-weight: 300;
+}
+.contacts .container .wrapper .contact-text-headline h1 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  font-size: 35px;
+  mix-blend-mode: difference;
+}
+.contacts .container .wrapper .contact-text-headline h1 .cookies {
+  color: #ff6900;
+}
+.contacts .container .wrapper .contact-text-headline h1 .connect {
+  color: #f0ff3e;
+}
+.contacts .container .wrapper .socials {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 5rem;
+  font-family: "Montserrat", sans-serif;
+}
+.contacts .container .wrapper .socials h4 {
+  position: relative;
+}
+.contacts .container .wrapper .socials h4::after {
+  position: absolute;
+  content: "";
+  height: 1px;
+  width: 40%;
+  background-color: #c4c4c4;
+  bottom: -5px;
+  left: 0;
+  transition: width 0.3s ease;
+}
+.contacts .container .wrapper .socials h4:hover::after {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .contacts .container .wrapper .socials {
+    flex-direction: row;
+    gap: 1rem;
+  }
+}
+
+.mobile-nav {
+  position: fixed;
+  height: 100vh;
+  z-index: 99999999;
+}
+.mobile-nav .main-nav {
+  z-index: 3;
+  background-color: #10101a;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  overflow: hidden;
+}
+.mobile-nav .main-nav .container .wrapper {
+  padding: 1rem;
+}
+.mobile-nav .main-nav .container .wrapper .close-btn {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: flex-end;
+}
+.mobile-nav .main-nav .container .wrapper ul {
+  margin-top: 2rem;
+  list-style-type: none;
+  color: #fafafa;
+  font-family: "Poppins", sans-serif;
+}
+.mobile-nav .main-nav .container .wrapper ul li {
+  font-size: 15px;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  border-bottom: 1pt solid #1c1c2d;
+}
+.mobile-nav .main-nav .container .wrapper ul li a {
   text-decoration: none;
+  color: #fafafa;
+}
+.mobile-nav .mb-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.mobile-nav .bg-1 {
+  width: 100%;
+  background-color: #e74c3c;
+  z-index: 1;
+}
+.mobile-nav .bg-2 {
+  width: 100%;
+  background-color: #3498db;
+  z-index: 2;
+}
+
+.proj1-hero {
+  position: relative;
+}
+.proj1-hero .background {
+  top: 0;
+  left: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+.proj1-hero .background figure {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.proj1-hero .background figure .cover {
+  background-color: #10101a;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+.proj1-hero .container .wrapper {
+  color: #fafafa;
+  padding-top: 8rem;
+  padding-bottom: 2rem;
+}
+.proj1-hero .container .wrapper .hero-text .punch-text {
+  font-family: "Montserrat", sans-serif;
+}
+.proj1-hero .container .wrapper .hero-text .punch-text h1 {
+  font-weight: 900;
+  font-size: 35px;
+}
+@media (min-width: 768px) {
+  .proj1-hero .container .wrapper .hero-text .punch-text h1 {
+    font-size: 45px;
+  }
+}
+.proj1-hero .container .wrapper .hero-text .information {
+  margin-top: 0.2rem;
+}
+.proj1-hero .container .wrapper .hero-text .information span {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 13px;
+  display: block;
+  max-width: 70%;
+}
+.proj1-hero .container .wrapper .hero-text .project-overview {
+  margin-top: 1rem;
+}
+.proj1-hero .container .wrapper .hero-text .project-overview .quick-info .title {
+  font-family: "Montserrat", sans-serif;
+}
+.proj1-hero .container .wrapper .hero-text .project-overview .quick-info .title h4 {
+  font-size: 12px;
+  font-weight: bold;
+}
+.proj1-hero .container .wrapper .hero-text .project-overview .quick-info .row-2 {
+  margin-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+.proj1-hero .container .wrapper .hero-text .project-overview .quick-info .row-2 span {
+  background-color: #34495e;
+  padding: 0.2rem 0.8rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  border-radius: 25px;
+}
+.proj1-hero .container .wrapper .hero-text .project-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 1rem;
+}
+.proj1-hero .container .wrapper .hero-text .project-buttons button {
+  padding: 0.5rem 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  max-width: 150px;
+  font-family: "Poppins", sans-serif;
+  color: #fafafa;
+  background: transparent;
+  border: 1px solid #fafafa;
+  font-size: 12px;
+  border-radius: 5px;
+}
+.proj1-hero .container .wrapper .hero-text .project-buttons button svg {
+  width: 20px;
+}
+.proj1-hero .container .wrapper .hero-text .project-buttons button.cta {
+  background-color: #2c3e50;
+  border: none;
+}
+.proj1-hero .container .wrapper .scroll-down {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.proj1-hero .container .wrapper .scroll-down span {
+  font-family: "Poppins", sans-serif;
+  margin-top: 0.4rem;
+  font-size: 10px;
+}
+
+.information-section {
+  margin-top: 2rem;
+  padding-bottom: 3rem;
+  color: #fafafa;
+}
+.information-section .container .wrapper .info-boxes .title {
+  font-family: "Poppins", sans-serif;
+}
+.information-section .container .wrapper .info-boxes .title h1 {
+  font-weight: 300;
+  font-size: 25px;
+}
+.information-section .container .wrapper .info-boxes .box {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  border-radius: 10px;
+  padding: 1rem;
+  font-family: "Montserrat", sans-serif;
+  background-color: #141b2c;
+  overflow-x: scroll;
+}
+.information-section .container .wrapper .info-boxes .box .box-title {
+  padding-bottom: 1rem;
+}
+.information-section .container .wrapper .info-boxes .box .box-title h1 {
+  font-size: 20px;
+}
+.information-section .container .wrapper .info-boxes .box .box-main {
+  display: flex;
+  gap: 2rem;
+}
+.information-section .container .wrapper .info-boxes .box .box-main-modified {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.information-section .container .wrapper .info-boxes .box .box-main-modified .row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+@media (min-width: 768px) {
+  .information-section .container .wrapper .info-boxes .box .box-main-modified .row {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .information-section .container .wrapper .info-boxes .box .box-main-modified .row .main-text {
+    flex-basis: 50%;
+  }
+  .information-section .container .wrapper .info-boxes .box .box-main-modified .row .support-text {
+    flex-basis: 50%;
+  }
+}
+.information-section .container .wrapper .info-boxes .box .box-main-modified .row .main-text h1 {
+  font-size: 16px;
+}
+.information-section .container .wrapper .info-boxes .box .box-main-modified .row .support-text span {
+  font-size: 13px;
+}
+.information-section .container .wrapper .info-boxes .box .col:nth-of-type(1) {
+  margin-left: 1rem;
+}
+.information-section .container .wrapper .info-boxes .box .col .title h3 {
+  font-size: 13px;
+}
+.information-section .container .wrapper .info-boxes .box .col .text {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 120px;
+  flex: 1 0;
+}
+.information-section .container .wrapper .info-boxes .box .col .text h1,
+.information-section .container .wrapper .info-boxes .box .col .text span {
+  display: flex;
+  align-items: center;
+  height: 40px;
+}
+.information-section .container .wrapper .info-boxes .box .col .text h1 {
+  font-size: 16px;
+}
+.information-section .container .wrapper .info-boxes .box .col .text span {
+  font-size: 13px;
+}
+.information-section .container .wrapper .info-boxes .box .col.function {
+  min-width: 400px;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #292943;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
+html {
+  cursor: none;
+  scroll-behavior: smooth;
+  scroll-padding: 120px;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.cursor {
+  display: none;
+  position: fixed;
+  z-index: 9999999999;
+  animation: 50s spin infinite linear;
+  mix-blend-mode: difference;
+  pointer-events: none;
+}
+@media (min-width: 768px) {
+  .cursor {
+    display: block;
   }
 }
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(1080deg);
+  }
+}
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+body {
+  background-color: #10101a;
+}
+
+/*# sourceMappingURL=globals.css.map */

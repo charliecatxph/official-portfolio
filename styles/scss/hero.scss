@@ -1,0 +1,160 @@
+.hero {
+    height: clamp(600px, 100vh, 800px);
+    color: #fafafa;
+    .container {
+        .wrapper {
+            padding-top: 7rem;
+            display: flex;
+            flex-direction: column-reverse;
+
+            .hero-info {
+                .punch-text {
+                    font-family: "Montserrat", sans-serif;
+                    h1 {
+                        font-size: 2.5rem;
+                        text-align: center;
+                        font-weight: 900;
+                    }
+                    span {
+                        display: inline-block;
+                    }
+
+                    .gradient-text-1 {
+                        background: linear-gradient(90deg, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        background-clip: text;
+                        text-fill-color: transparent;
+                    }
+                    .gradient-text-2 {
+                        background: linear-gradient(133.64deg, #00e0ff 25.59%, #ebff00 56.88%);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        background-clip: text;
+                        text-fill-color: transparent;
+                    }
+                    .gradient-text-3 {
+                        background: linear-gradient(89.94deg, #1400ff -4.8%, #2369f1 -4.8%, #ff00c7 51.25%);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        background-clip: text;
+                        text-fill-color: transparent;
+                    }
+                }
+                .information {
+                    margin-top: 1rem;
+                    font-family: "Poppins", sans-serif;
+                    text-align: center;
+                    span {
+                        font-weight: 300;
+                        font-size: 15px;
+
+                        display: block;
+                    }
+                }
+                .buttons {
+                    margin-top: 1rem;
+                    display: flex;
+                    justify-content: space-evenly;
+                    button {
+                        display: flex;
+                        align-items: center;
+                        width: 40%;
+                        max-width: 300px;
+                        padding: 0.3rem 0.7rem;
+                        font-family: "Poppins", sans-serif;
+                        border: none;
+                        font-size: 12px;
+                        font-weight: 500;
+                        svg {
+                            margin-right: 0.5rem;
+                            width: 17px;
+                        }
+                        &.github-btn {
+                            color: #10101a;
+                            background-color: #fafafa;
+                        }
+                        &.linkedin-btn {
+                            background-color: #10101a;
+                            color: #fafafa;
+                            border: 1px solid #fafafa;
+                        }
+                    }
+                }
+                .scroll-down {
+                    margin-top: 2rem;
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                    span {
+                        font-family: "Poppins", sans-serif;
+                        margin-top: 0.4rem;
+                        font-size: 10px;
+                    }
+                }
+            }
+            .hero-img {
+                max-width: 200px;
+                margin: 0 auto;
+            }
+            @media (min-width: 768px) {
+                .hero-info {
+                    .punch-text {
+                        h1 {
+                            font-size: 4rem;
+                        }
+                    }
+                    .information {
+                        span {
+                            font-size: 18px;
+                        }
+                    }
+                    .buttons {
+                        margin-top: 2rem;
+                        gap: 1rem;
+                        justify-content: center;
+                        button {
+                            max-width: 200px;
+                        }
+                    }
+                }
+                .hero-img {
+                    max-width: 230px;
+                }
+            }
+            @media (min-width: 1024px) {
+                padding-top: 11rem;
+                flex-direction: row;
+                .hero-info {
+                    flex: 1;
+                    .punch-text {
+                        h1 {
+                            font-size: 5rem;
+                            text-align: left;
+                        }
+                    }
+                    .information {
+                        text-align: left;
+                        span {
+                            font-size: 20px;
+                        }
+                    }
+                    .buttons {
+                        justify-content: flex-start;
+                        gap: 1rem;
+                        button {
+                            max-width: 160px;
+                            height: 40px;
+                        }
+                    }
+                    .scroll-down {
+                        display: none;
+                    }
+                }
+                .hero-img {
+                    max-width: 400px;
+                }
+            }
+        }
+    }
+}

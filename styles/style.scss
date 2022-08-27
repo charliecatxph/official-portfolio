@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+@import "./scss/nav-bar.scss";
+@import "./scss/hero.scss";
+@import "./scss/about-me.scss";
+@import "./scss/projects.scss";
+@import "./scss/contact.scss";
+@import "./scss/mobile-nav.scss";
+
+// projects
+@import "./scss/projects/project.scss";
+
+// project components
+@import "./scss/projects/information.scss";
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #292943;
+    border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    cursor: none;
+    scroll-behavior: smooth;
+    scroll-padding: 120px;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.cursor {
+    display: none;
+    position: fixed;
+    z-index: 9999999999;
+    animation: 50s spin infinite linear;
+    mix-blend-mode: difference;
+    pointer-events: none;
+    @media (min-width: 768px) {
+        display: block;
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(1080deg);
+    }
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+body {
+    background-color: #10101a;
+}

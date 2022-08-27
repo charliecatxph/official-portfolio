@@ -1,0 +1,55 @@
+.mobile-nav {
+    position: fixed;
+    height: 100vh;
+    z-index: 99999999;
+    .main-nav {
+        z-index: 3;
+        background-color: #10101a;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        overflow: hidden;
+        .container {
+            .wrapper {
+                padding: 1rem;
+                .close-btn {
+                    margin-top: 1rem;
+                    display: flex;
+                    justify-content: flex-end;
+                }
+                ul {
+                    margin-top: 2rem;
+                    list-style-type: none;
+                    color: #fafafa;
+                    font-family: "Poppins", sans-serif;
+                    li {
+                        font-size: 15px;
+                        text-align: center;
+                        margin-bottom: 0.5rem;
+                        padding: 0.5rem;
+                        border-bottom: 1pt solid #1c1c2d;
+                        a {
+                            text-decoration: none;
+                            color: #fafafa;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .mb-bg {
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+    .bg-1 {
+        width: 100%;
+        background-color: #e74c3c;
+        z-index: 1;
+    }
+    .bg-2 {
+        width: 100%;
+        background-color: #3498db;
+        z-index: 2;
+    }
+}
