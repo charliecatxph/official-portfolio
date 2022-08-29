@@ -53,8 +53,8 @@ export default function Hello() {
             <motion.span variants={fadeUp}>
               I currently do this as a hobby but I&apos;m now looking forward to
               other opportunities. I&apos;ve been looking forward to freelancing
-              and working part-time but I&apos;ll unfotunately have to put in on
-              hold because I&apos;m now going to Senior High School.
+              and working part-time but I&apos;ll unfortunately have to put in
+              on hold because I&apos;m now going to Senior High School.
             </motion.span>
           </div>
         </motion.div>
