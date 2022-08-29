@@ -159,6 +159,7 @@ export default function Achievements() {
               priority
               className={imageModule.image}
               src={achievements[d1].image}
+              alt={d1}
             />
           </div>
           <div className="title">

@@ -130,7 +130,11 @@ export default function Hero() {
       >
         <div className="wrapper">
           <motion.figure variants={fade} className="handsome">
-            <Image src={Handsome} className={imageModule.image} />
+            <Image
+              src={Handsome}
+              className={imageModule.image}
+              alt="A photo of Charl Concepcion"
+            />
           </motion.figure>
           <div className="hero-short-bio">
             <motion.h1 variants={fadeUp} className="my-name">

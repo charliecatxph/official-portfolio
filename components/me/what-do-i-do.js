@@ -76,7 +76,11 @@ export default function WhatDoIDo() {
               className="row"
             >
               <motion.div variants={fade} className="image">
-                <Image src={What1} className={imageModule.image} />
+                <Image
+                  src={What1}
+                  className={imageModule.image}
+                  alt="Prototyping"
+                />
               </motion.div>
               <div className="info">
                 <motion.div variants={fadeUp} className="title">
@@ -98,7 +102,11 @@ export default function WhatDoIDo() {
               className="row reverse"
             >
               <motion.div variants={fade} className="image">
-                <Image src={What2} className={imageModule.image} />
+                <Image
+                  src={What2}
+                  className={imageModule.image}
+                  alt="Web Programming"
+                />
               </motion.div>
               <div className="info">
                 <motion.div variants={fadeUp} className="title">
@@ -122,7 +130,11 @@ export default function WhatDoIDo() {
               className="row"
             >
               <motion.div variants={fade} className="image">
-                <Image src={What3} className={imageModule.image} />
+                <Image
+                  src={What3}
+                  className={imageModule.image}
+                  alt="Graphics Work"
+                />
               </motion.div>
               <div className="info">
                 <motion.div variants={fadeUp} className="title">

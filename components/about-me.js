@@ -76,16 +76,17 @@ export default function AboutMe() {
             <div className="my-about-me">
               <div className="text">
                 <motion.span variants={fadeUp}>
-                  Hello! I’m Charl Concepcion. A full-stack web developer based
-                  in the Philippines. I’m currently certified on freeCodeCamp as
-                  a full-stack software engineer and I create web applications
-                  with design and performance in mind.
+                  Hello! I&apos;m Charl Concepcion. A full-stack web developer
+                  based in the Philippines. I&apos;m currently certified on
+                  freeCodeCamp as a full-stack software engineer and I create
+                  web applications with design and performance in mind.
                 </motion.span>
                 <motion.span variants={fadeUp}>
-                  I currently do this as a hobby but I’m now looking forward to
-                  other opportunities. I’ve been looking forward to freelancing
-                  and working part-time but I'll unfotunately have to put in on
-                  hold because I'm now going to Senior High School.
+                  I currently do this as a hobby but I&apos;m now looking
+                  forward to other opportunities. I&apos;ve been looking forward
+                  to freelancing and working part-time but I&apos;ll
+                  unfotunately have to put in on hold because I&apos;m now going
+                  to Senior High School.
                 </motion.span>
               </div>
               <div className="more-about-me">
