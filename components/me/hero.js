@@ -155,10 +155,18 @@ export default function Hero() {
                 </div>
                 <div className="featured-row">
                   <motion.figure variants={fadeUp}>
-                    <Image src={feat1} className={imageModule.image} />
+                    <Image
+                      src={feat1}
+                      className={imageModule.image}
+                      alt="feat1"
+                    />
                   </motion.figure>
                   <motion.figure variants={fadeUp}>
-                    <Image src={feat2} className={imageModule.image} />
+                    <Image
+                      src={feat2}
+                      className={imageModule.image}
+                      alt="feat2"
+                    />
                   </motion.figure>
                 </div>
               </div>
