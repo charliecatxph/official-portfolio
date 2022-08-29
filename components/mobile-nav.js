@@ -136,28 +136,35 @@ export default function MobileNav({ activateMobileNav }) {
                 />
               </motion.svg>
             </div>
+
             <motion.ul variants={parent2} initial="hidden" animate="show">
-              <motion.li
-                variants={fadeUp}
-                whileTap={{ scale: 0.9 }}
-                onClick={() => activateMobileNav()}
-              >
-                <a href="#about-me">about me</a>
-              </motion.li>
-              <motion.li
-                variants={fadeUp}
-                whileTap={{ scale: 0.9 }}
-                onClick={() => activateMobileNav()}
-              >
-                <a href="#projects">projects</a>
-              </motion.li>
-              <motion.li
-                variants={fadeUp}
-                whileTap={{ scale: 0.9 }}
-                onClick={() => activateMobileNav()}
-              >
-                <a href="#contact">contact</a>
-              </motion.li>
+              <a href="#about-me">
+                <motion.li
+                  variants={fadeUp}
+                  whileTap={{ scale: 0.9 }}
+                  onClick={() => activateMobileNav()}
+                >
+                  about me
+                </motion.li>
+              </a>
+              <a href="#projects">
+                <motion.li
+                  variants={fadeUp}
+                  whileTap={{ scale: 0.9 }}
+                  onClick={() => activateMobileNav()}
+                >
+                  projects
+                </motion.li>
+              </a>
+              <a href="#contact">
+                <motion.li
+                  variants={fadeUp}
+                  whileTap={{ scale: 0.9 }}
+                  onClick={() => activateMobileNav()}
+                >
+                  contact
+                </motion.li>
+              </a>
             </motion.ul>
           </div>
         </div>
