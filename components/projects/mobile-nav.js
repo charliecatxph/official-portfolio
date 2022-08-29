@@ -140,11 +140,13 @@ export default function MobileNav({ activateMobileNav }) {
               </motion.svg>
             </div>
             <motion.ul variants={parent2} initial="hidden" animate="show">
-              <a>
-                <motion.li variants={fadeUp} whileTap={{ scale: 0.9 }}>
-                  <Link href="/">home</Link>
-                </motion.li>
-              </a>
+              <Link href="/">
+                <a>
+                  <motion.li variants={fadeUp} whileTap={{ scale: 0.9 }}>
+                    home
+                  </motion.li>
+                </a>
+              </Link>
               <a href="#information">
                 <motion.li
                   variants={fadeUp}

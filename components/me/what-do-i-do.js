@@ -72,7 +72,7 @@ export default function WhatDoIDo() {
               variants={parent}
               initial="hidden"
               whileInView="show"
-              viewport={{ once: true }}
+              viewport={{ once: true, amount: "full" }}
               className="row"
             >
               <motion.div variants={fade} className="image">
@@ -98,7 +98,7 @@ export default function WhatDoIDo() {
               variants={parent}
               initial="hidden"
               whileInView="show"
-              viewport={{ once: true }}
+              viewport={{ once: true, amount: "full" }}
               className="row reverse"
             >
               <motion.div variants={fade} className="image">
@@ -126,7 +126,7 @@ export default function WhatDoIDo() {
               variants={parent}
               initial="hidden"
               whileInView="show"
-              viewport={{ once: true }}
+              viewport={{ once: true, amount: "full" }}
               className="row"
             >
               <motion.div variants={fade} className="image">
