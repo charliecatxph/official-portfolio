@@ -1,18 +1,22 @@
-import Head from "next/head";
-import { useEffect, useState } from "react";
+import NavBar from "../components/me/nav-bar";
+import MobileNav from "../components/me/mobile-nav";
+import Hero from "../components/me/hero";
+import Hello from "../components/me/hello";
+import WhatDoIDo from "../components/me/what-do-i-do";
+import Skills from "../components/me/skills";
+import Achievements from "../components/me/achievements";
+import Contact from "../components/projects/contact";
 
-// components
-import NavBar from "../components/nav-bar";
-import Hero from "../components/hero";
-import AboutMe from "../components/about-me";
-import Projects from "../components/projects";
-import Contact from "../components/contact";
-import MobileNav from "../components/mobile-nav";
+// react
+import { useState, useEffect } from "react";
+
+// next
+import Head from "next/head";
 
 // framer motion
 import { AnimatePresence } from "framer-motion";
 
-export default function Home() {
+export default function Me() {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [mobileNav, setMobileNav] = useState(false);
 
@@ -42,11 +46,8 @@ export default function Home() {
   return (
     <main>
       <Head>
-        <title>Official Portfolio @charliecatxph</title>
-        <meta
-          name="description"
-          content="Charl Concepcion's Official Portfolio | @charliecatxph"
-        />
+        <title>Who Am I | @charliecatxph</title>
+        <meta name="description" content="Who Am I | @charliecatxph" />
         <link rel="icon" href="/favicon.png" />
       </Head>
       <svg
@@ -179,11 +180,12 @@ export default function Home() {
       <AnimatePresence>
         {mobileNav ? <MobileNav activateMobileNav={setMobileNavState} /> : ""}
       </AnimatePresence>
-
       <NavBar activateMobileNav={setMobileNavState} />
       <Hero />
-      <AboutMe />
-      <Projects />
+      <Hello />
+      <WhatDoIDo />
+      <Skills />
+      <Achievements />
       <Contact />
     </main>
   );

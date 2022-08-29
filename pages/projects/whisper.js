@@ -29,7 +29,7 @@ export default function Whisper() {
     return () => {
       window.removeEventListener("mousemove", setMousePosition);
     };
-  });
+  }, [position]);
 
   useEffect(() => {
     document.body.style.overflow = "hidden";

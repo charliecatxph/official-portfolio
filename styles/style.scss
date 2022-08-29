@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
 
+// hero
 @import "./scss/nav-bar.scss";
 @import "./scss/hero.scss";
 @import "./scss/about-me.scss";
@@ -12,6 +13,13 @@
 
 // project components
 @import "./scss/projects/information.scss";
+
+// me
+@import "./scss/me/hero.scss";
+@import "./scss/me/hello.scss";
+@import "./scss/me/what-do-i-do.scss";
+@import "./scss/me/skills.scss";
+@import "./scss/me/achievements.scss";
 
 /* width */
 ::-webkit-scrollbar {
@@ -41,9 +49,12 @@
 }
 
 html {
-    cursor: none;
+    cursor: initial;
     scroll-behavior: smooth;
     scroll-padding: 120px;
+    @media (min-width: 768px) {
+        cursor: none;
+    }
 }
 
 body {

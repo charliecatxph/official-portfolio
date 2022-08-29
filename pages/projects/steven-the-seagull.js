@@ -29,7 +29,7 @@ export default function Steven() {
     return () => {
       window.removeEventListener("mousemove", setMousePosition);
     };
-  });
+  }, [position]);
 
   useEffect(() => {
     document.body.style.overflow = "hidden";

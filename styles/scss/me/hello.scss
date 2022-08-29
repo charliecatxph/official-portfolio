@@ -1,0 +1,26 @@
+.hello-me {
+    color: #fafafa;
+    font-family: "Poppins", sans-serif;
+    .container {
+        .wrapper {
+            .title {
+                h1 {
+                    font-weight: 300;
+                    font-size: 25px;
+                }
+            }
+            .hello-text {
+                margin-top: 1rem;
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                @media (min-width: 768px) {
+                    flex-direction: row;
+                }
+                span {
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}

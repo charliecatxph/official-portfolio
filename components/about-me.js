@@ -4,6 +4,9 @@ import handsome from "../assets/handsome2.png";
 // framer motion
 import { motion } from "framer-motion";
 
+// router
+import Link from "next/link";
+
 const parent = {
   hidden: {
     opacity: 0,
@@ -81,9 +84,16 @@ export default function AboutMe() {
                 <motion.span variants={fadeUp}>
                   I currently do this as a hobby but I’m now looking forward to
                   other opportunities. I’ve been looking forward to freelancing
-                  and working part-time but I’ll look forward to it soon since
-                  I’m still going to Senior High School.
+                  and working part-time but I'll unfotunately have to put in on
+                  hold because I'm now going to Senior High School.
                 </motion.span>
+              </div>
+              <div className="more-about-me">
+                <Link href="/me">
+                  <motion.button variants={fade} whileTap={{ scale: 0.9 }}>
+                    VIEW MY FULL PROFILE HERE
+                  </motion.button>
+                </Link>
               </div>
             </div>
           </motion.div>
